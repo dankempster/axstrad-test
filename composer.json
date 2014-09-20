@@ -14,6 +14,9 @@
     ],
     "require": {
         "php": ">=5.4",
+        "doctrine/common": ">=2.2.3,<2.4-dev",
+        "doctrine/orm": ">=2.2.3,<2.4-dev",
+        "gedmo/doctrine-extensions": "~2.3",
         "phpoption/phpoption": "~1.3",
         "symfony/options-resolver": "~2.3"
     },
@@ -31,7 +34,9 @@
         "exclude": [
             "!vendor",
             "phpunit.xml*",
-            "src/Axstrad/*/Tests"
+            "src/Axstrad/*/Tests",
+            "src/Axstrad/Bundle/*/Tests",
+            "src/Axstrad/DoctrineExtensions/*/Tests"
         ]
     }
 }
