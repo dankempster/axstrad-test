@@ -15,6 +15,10 @@
         <testsuite name="Axstrad Library">
             <directory suffix="Test.php">./src/Axstrad/*/Tests/</directory>
         </testsuite>
+
+        <testsuite name="Axstrad\WebFrameworkBundle">
+            <directory suffix="Test.php">./src/Axstrad/Bundle/WebFrameworkBundle/Tests/</directory>
+        </testsuite>
     </testsuites>
 
     <logging>
@@ -37,6 +41,7 @@
             <exclude>
                 <directory>./vendor</directory>
                 <directory>./src/Axstrad/*/Tests</directory>
+                <directory>./src/Axstrad/Bundle/*/Tests</directory>
                 <directory>./src/Axstrad/Component/Test/Example</directory>
             </exclude>
         </whitelist>
