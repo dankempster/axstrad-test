@@ -8,6 +8,17 @@
          verbose="false">
 
     <testsuites>
+        <testsuite name="Axstrad\Common\Util\ArrayUtil">
+            <file>./src/Axstrad/Common/Tests/Util/ArrayUtil/DecompilePathTest.php</file>
+            <file>./src/Axstrad/Common/Tests/Util/ArrayUtil/MergeRecursiveDistinctTest.php</file>
+            <file>./src/Axstrad/Common/Tests/Util/ArrayUtil/AttachTest.php</file>
+            <file>./src/Axstrad/Common/Tests/Util/ArrayUtil/GetValueTest.php</file>
+            <file>./src/Axstrad/Common/Tests/Util/ArrayUtil/FlattenTest.php</file>
+            <file>./src/Axstrad/Common/Tests/Util/ArrayUtil/RaiseTest.php</file>
+            <file>./src/Axstrad/Common/Tests/Util/ArrayUtil/ReindexTest.php</file>
+            <file>./src/Axstrad/Common/Tests/Util/ArrayUtil/IsAssociativeTest.php</file>
+        </testsuite>
+
         <testsuite name="Axstrad\Test">
             <file>./src/Axstrad/Component/Test/MockedIteratorTest.php</file>
         </testsuite>
