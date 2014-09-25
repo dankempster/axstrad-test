@@ -8,6 +8,9 @@
          verbose="false">
 
     <testsuites>
+            <testsuite name="Axstrad\TestBundle">
+                <file>./src/Axstrad/Bundle/TestBundle/Functional/WebTestCase.php</file>
+            </testsuite>
     </testsuites>
 
     <logging>
