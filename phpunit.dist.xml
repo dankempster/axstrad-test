@@ -37,6 +37,10 @@
         <testsuite name="Axstrad\TestBundle">
             <file>./src/Axstrad/Bundle/TestBundle/Functional/WebTestCase.php</file>
         </testsuite>
+
+        <testsuite name="Axstrad\OptionsResolver">
+            <directory suffix="Test.php">./src/Axstrad/Component/OptionsResolver/Tests/</directory>
+        </testsuite>
     </testsuites>
 
     <logging>
