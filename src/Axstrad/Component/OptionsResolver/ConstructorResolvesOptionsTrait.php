@@ -8,20 +8,20 @@
  * file that was distributed with this source code.
  *
  * @author Dan Kempster <dev@dankempster.co.uk>
- * @package Axstrad\Common
- * @subpackage Traits
+ * @package Axstrad\OptionsResolver
  */
 namespace Axstrad\Component\OptionsResolver;
 
 
 /**
- * Axstrad\Component\OptionsResolver\ConstructorOptionsResolverTrait
+ * Axstrad\Component\OptionsResolver\ConstructorResolvesOptionsTrait
  *
- * @subpackage Traits
  */
-trait ConstructorOptionsResolverTrait
+trait ConstructorResolvesOptionsTrait
 {
-	use OptionsResolverTrait;
+	use ResolvesOptionsTrait {
+		ResolvesOptionsTrait::resolveOptions as protected;
+	}
 
 
 	/**

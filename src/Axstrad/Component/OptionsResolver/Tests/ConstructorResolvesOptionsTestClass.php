@@ -13,17 +13,17 @@
  */
 namespace Axstrad\Component\OptionsResolver\Tests;
 
-use Axstrad\Component\OptionsResolver\ConstructorOptionsResolverTrait;
+use Axstrad\Component\OptionsResolver\ConstructorResolvesOptionsTrait;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 
 /**
- * Axstrad\Component\OptionsResolver\Tests\ConstructorOptionsResolverTestClass
+ * Axstrad\Component\OptionsResolver\Tests\ConstructorResolvesOptionsTestClass
  */
-abstract class ConstructorOptionsResolverTestClass
+abstract class ConstructorResolvesOptionsTestClass
 {
-    use ConstructorOptionsResolverTrait {
-        ConstructorOptionsResolverTrait::__construct as public construct;
+    use ConstructorResolvesOptionsTrait {
+        ConstructorResolvesOptionsTrait::__construct as construct;
     }
 
     protected function configureOptions(OptionsResolverInterface $resolver)

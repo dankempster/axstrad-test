@@ -15,12 +15,12 @@ namespace Axstrad\Component\OptionsResolver\Tests;
 
 
 /**
- * Axstrad\Component\OptionsResolver\ConstructorOptionsResolverTrait
+ * Axstrad\Component\OptionsResolver\ConstructorResolvesOptionsTraitTest
  *
- * @covers Axstrad\Component\OptionsResolver\ConstructorOptionsResolverTrait
- * @uses Axstrad\Component\OptionsResolver\OptionsResolverTrait
+ * @covers Axstrad\Component\OptionsResolver\ConstructorResolvesOptionsTrait
+ * @uses Axstrad\Component\OptionsResolver\ConstructorResolvesOptionsTrait
  */
-class ConstructorOptionsResolverTraitTest extends \PHPUnit_Framework_TestCase
+class ConstructorResolvesOptionsTraitTest extends \PHPUnit_Framework_TestCase
 {
     /**
      */
@@ -29,7 +29,7 @@ class ConstructorOptionsResolverTraitTest extends \PHPUnit_Framework_TestCase
         $data = array('foo' => 1);
 
         $mock = $this->getMockForAbstractClass(
-            __NAMESPACE__.'\ConstructorOptionsResolverTestClass',
+            __NAMESPACE__.'\ConstructorResolvesOptionsTestClass',
             array(),
             "",
             null,
