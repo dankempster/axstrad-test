@@ -13,19 +13,16 @@
  */
 namespace Axstrad\Component\OptionsResolver\Tests;
 
-use Axstrad\Component\OptionsResolver\OptionsResolverTrait;
+use Axstrad\Component\OptionsResolver\ResolvesOptionsTrait;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 
 /**
- * Axstrad\Component\OptionsResolver\Tests\OptionsResolverTestClass
+ * Axstrad\Component\OptionsResolver\Tests\ResolvesOptionsAbstractTestClass
  */
-class OptionsResolverTestClass extends OptionsResolverAbstractTestClass
+abstract class ResolvesOptionsAbstractTestClass
 {
-    protected function configureOptions(OptionsResolverInterface $resolver)
-    {
-        $resolver->setRequired(array(
-            'foo'
-        ));
+    use ResolvesOptionsTrait {
+        ResolvesOptionsTrait::resolveOptions as public;
     }
 }

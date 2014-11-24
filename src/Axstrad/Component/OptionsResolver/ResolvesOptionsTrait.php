@@ -8,8 +8,7 @@
  * file that was distributed with this source code.
  *
  * @author Dan Kempster <dev@dankempster.co.uk>
- * @package Axstrad\Common
- * @subpackage Traits
+ * @package Axstrad\OptionsResolver
  */
 namespace Axstrad\Component\OptionsResolver;
 
@@ -18,11 +17,9 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 
 /**
- * Axstrad\Component\OptionsResolver\OptionsResolverTrait
- *
- * @subpackage Traits
+ * Axstrad\Component\OptionsResolver\ResolvesOptionsTrait
  */
-trait OptionsResolverTrait
+trait ResolvesOptionsTrait
 {
     /**
      * @param array $options The options to resolve
@@ -30,7 +27,7 @@ trait OptionsResolverTrait
      *
      * @uses configureOptions To configure the options resolved
      */
-    protected function resolveOptions(array $options = array())
+    public function resolveOptions(array $options = array())
     {
         $resolver = new OptionsResolver;
         $this->configureOptions($resolver);

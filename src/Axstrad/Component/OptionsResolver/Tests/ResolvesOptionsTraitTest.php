@@ -15,17 +15,17 @@ namespace Axstrad\Component\OptionsResolver\Tests;
 
 
 /**
- * Axstrad\Component\OptionsResolver\Tests\OptionsResolverTraitTest
+ * Axstrad\Component\OptionsResolver\Tests\ResolvesOptionsTraitTest
  *
- * @covers Axstrad\Component\OptionsResolver\OptionsResolverTrait::resolveOptions
+ * @covers Axstrad\Component\OptionsResolver\ResolvesOptionsTrait::resolveOptions
  */
-class OptionsResolverTraitTest extends \PHPUnit_Framework_TestCase
+class ResolvesOptionsTraitTest extends \PHPUnit_Framework_TestCase
 {
     /**
      */
     public function testInvokesConfigureOptionsWithOptionsResolver()
     {
-        $mock = $this->getMockForAbstractClass(__NAMESPACE__.'\OptionsResolverAbstractTestClass');
+        $mock = $this->getMockForAbstractClass(__NAMESPACE__.'\ResolvesOptionsAbstractTestClass');
         $mock->expects($this->once())
              ->method('configureOptions')
              ->with($this->equalTo(new \Symfony\Component\OptionsResolver\OptionsResolver))
@@ -40,7 +40,7 @@ class OptionsResolverTraitTest extends \PHPUnit_Framework_TestCase
      */
     public function testThrowsExceptionWhenMissingOption()
     {
-        $fixture = new OptionsResolverTestClass();
+        $fixture = new ResolvesOptionsTestClass();
         $fixture->resolveOptions(array());
     }
 
@@ -50,7 +50,7 @@ class OptionsResolverTraitTest extends \PHPUnit_Framework_TestCase
      */
     public function testThrowsExceptionForUnexpectedOption()
     {
-        $fixture = new OptionsResolverTestClass();
+        $fixture = new ResolvesOptionsTestClass();
         $fixture->resolveOptions(array('hello' => 'world'));
     }
 
@@ -59,7 +59,7 @@ class OptionsResolverTraitTest extends \PHPUnit_Framework_TestCase
      */
     public function testReturnsResolvedOptions()
     {
-        $fixture = new OptionsResolverTestClass();
+        $fixture = new ResolvesOptionsTestClass();
 
         $options = array('foo' => 'hello world');
 

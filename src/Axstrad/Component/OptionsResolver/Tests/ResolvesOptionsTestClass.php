@@ -18,11 +18,14 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 
 /**
- * Axstrad\Component\OptionsResolver\Tests\OptionsResolverAbstractTestClass
+ * Axstrad\Component\OptionsResolver\Tests\ResolvesOptionsTestClass
  */
-abstract class OptionsResolverAbstractTestClass
+class ResolvesOptionsTestClass extends ResolvesOptionsAbstractTestClass
 {
-    use OptionsResolverTrait {
-        OptionsResolverTrait::resolveOptions as public;
+    protected function configureOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setRequired(array(
+            'foo'
+        ));
     }
 }
