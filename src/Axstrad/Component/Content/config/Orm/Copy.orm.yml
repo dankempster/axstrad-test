@@ -1,0 +1,6 @@
+Copy:
+    type: mappedSuperclass
+    fields:
+        copy:
+            type: text
+

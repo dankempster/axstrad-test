@@ -8,6 +8,9 @@
          verbose="false">
 
     <testsuites>
+        <testsuite name="Axstrad\Content">
+            <directory suffix="Test.php">./src/Axstrad/Component/Content/Tests</directory>
+        </testsuite>
     </testsuites>
 
     <logging>
