@@ -42,12 +42,20 @@
             <directory suffix="Test.php">./src/Axstrad/Component/OptionsResolver/Tests/</directory>
         </testsuite>
 
+        <testsuite name="Axstrad\DoctrineExtensions">
+            <directory suffix="Test.php">./src/Axstrad/DoctrineExtensions/Tests/</directory>
+        </testsuite>
+
         <testsuite name="Axstrad\TestBundle">
             <file>./src/Axstrad/Bundle/TestBundle/Functional/WebTestCase.php</file>
         </testsuite>
 
         <testsuite name="Axstrad\WebFrameworkBundle">
             <directory suffix="Test.php">./src/Axstrad/Bundle/WebFrameworkBundle/Tests/</directory>
+        </testsuite>
+
+        <testsuite name="Axstrad\DoctrineExtensionsBundle">
+            <directory suffix="Test.php">./src/Axstrad/Bundle/DoctrineExtensionsBundle/Tests/</directory>
         </testsuite>
     </testsuites>
 
@@ -69,11 +77,11 @@
         <whitelist addUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./src</directory>
             <exclude>
-                <directory>./vendor</directory>
-
+                <directory>./src/Axstrad/*/Tests</directory>
                 <directory>./src/Axstrad/Bundle/*/Tests</directory>
                 <directory>./src/Axstrad/Component/*/Tests</directory>
                 <directory>./src/Axstrad/Component/Test/Example</directory>
+                <directory>./vendor</directory>
             </exclude>
         </whitelist>
     </filter>
