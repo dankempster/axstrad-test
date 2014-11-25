@@ -46,6 +46,9 @@
             <file>./src/Axstrad/Bundle/TestBundle/Functional/WebTestCase.php</file>
         </testsuite>
 
+        <testsuite name="Axstrad\WebFrameworkBundle">
+            <directory suffix="Test.php">./src/Axstrad/Bundle/WebFrameworkBundle/Tests/</directory>
+        </testsuite>
     </testsuites>
 
     <logging>
@@ -67,6 +70,10 @@
             <directory suffix=".php">./src</directory>
             <exclude>
                 <directory>./vendor</directory>
+
+                <directory>./src/Axstrad/Bundle/*/Tests</directory>
+                <directory>./src/Axstrad/Component/*/Tests</directory>
+                <directory>./src/Axstrad/Component/Test/Example</directory>
             </exclude>
         </whitelist>
     </filter>
