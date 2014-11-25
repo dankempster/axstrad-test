@@ -18,9 +18,9 @@ use Axstrad\DoctrineExtensions\Activatable\ActivatableListener;
 
 
 /**
- * Axstrad\DoctrineExtensions\Activatable\Filter\ActivatableFilter
+ * Axstrad\DoctrineExtensions\Activatable\Filter\OrmFilter
  */
-class ActivatableFilter extends SQLFilter
+class OrmFilter extends SQLFilter
 {
     protected $listener;
     protected $entityManager;
@@ -43,7 +43,7 @@ class ActivatableFilter extends SQLFilter
 
         $column = $targetEntity->columnNames[$config['fieldName']];
 
-        return $targetTableAlias.'.'.$column.'=true';
+        return $targetTableAlias.'.'.$column.'=1';
     }
 
     public function disableForEntity($class)

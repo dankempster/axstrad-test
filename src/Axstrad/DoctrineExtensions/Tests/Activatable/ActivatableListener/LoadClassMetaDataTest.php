@@ -4,7 +4,7 @@ namespace Axstrad\DoctrineExtensions\Tests\Activatable\ActivatableListener;
 use Axstrad\DoctrineExtensions\Activatable\ActivatableListener;
 
 /**
- * Axstrad\DoctrineExtensions\Tests\Activatable\ActivtableListener\LoadClassMetaDataTest
+ * Axstrad\DoctrineExtensions\Tests\Activatable\ActivatableListener\LoadClassMetaDataTest
  *
  * @uses Axstrad\DoctrineExtensions\Activatable\ActivatableListener
  */
