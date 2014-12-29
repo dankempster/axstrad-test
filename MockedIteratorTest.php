@@ -61,7 +61,7 @@ class MockedIteratorTest extends \PHPUnit_Framework_TestCase
         foreach ($items as $k => $v) {
             $iterator
                 ->expects(
-                    $this->at($counter ++)
+                    $this->at($counter++)
                 )
                 ->method('valid')
                 ->will(
@@ -70,7 +70,7 @@ class MockedIteratorTest extends \PHPUnit_Framework_TestCase
             ;
             $iterator
                 ->expects(
-                    $this->at($counter ++)
+                    $this->at($counter++)
                 )
                 ->method('current')
                 ->will(
@@ -80,7 +80,7 @@ class MockedIteratorTest extends \PHPUnit_Framework_TestCase
             if ($includeCallsToKey) {
                 $iterator
                     ->expects(
-                        $this->at($counter ++)
+                        $this->at($counter++)
                     )
                     ->method('key')
                     ->will(
@@ -90,7 +90,7 @@ class MockedIteratorTest extends \PHPUnit_Framework_TestCase
             }
             $iterator
                 ->expects(
-                    $this->at($counter ++)
+                    $this->at($counter++)
                 )
                 ->method('next')
             ;
@@ -147,8 +147,7 @@ class MockedIteratorTest extends \PHPUnit_Framework_TestCase
         $this->mockIterator($list, array('key1' => 'This is the first item'), TRUE);
 
         $counter = 0;
-        foreach ($list as $key => $value)
-        {
+        foreach ($list as $key => $value) {
             $counter++;
         }
         $this->assertEquals(1, $counter);
@@ -169,8 +168,7 @@ class MockedIteratorTest extends \PHPUnit_Framework_TestCase
 
         $counter = 0;
         $values = array();
-        foreach ($list as $value)
-        {
+        foreach ($list as $value) {
             $values[] = $value;
             $counter++;
         }
@@ -192,8 +190,7 @@ class MockedIteratorTest extends \PHPUnit_Framework_TestCase
 
         $counter = 0;
         $values = array();
-        foreach ($list as $key => $value)
-        {
+        foreach ($list as $key => $value) {
             $values[$key] = $value;
             $counter++;
         }
