@@ -37,7 +37,7 @@ class MockedIteratorTest extends \PHPUnit_Framework_TestCase
      * This attaches all the required expectations in the right order so that
      * our iterator will act like an iterator!
      *
-     * @param Iterator $iterator The iterator object; this is what we attach
+     * @param \Iterator $iterator The iterator object; this is what we attach
      *      all the expectations to
      * @param array An array of items that we will mock up, we will use the
      *      keys (if needed) and values of this array to return
