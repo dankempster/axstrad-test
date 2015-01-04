@@ -16,7 +16,7 @@ after_script:
 notifications:
   email:
     - dev@dankempster.co.uk
-build_matrix:
+matrix:
   allow_failures:
     - php: hhvm
 
