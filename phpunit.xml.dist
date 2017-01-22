@@ -9,12 +9,12 @@
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="false"
-         bootstrap="./vendor/autoload.php"
+         bootstrap="./tests/bootstrap.php"
          strict="true"
 >
     <testsuites>
         <testsuite name="Axstrad/Test">
-            <file>MockedIteratorTest.php</file>
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
 
@@ -41,9 +41,7 @@
         <whitelist addUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./</directory>
             <exclude>
-                <directory>./Example</directory>
-                <directory>./Test/Example</directory>
-                <directory>./vendor</directory>
+                <directory>./src</directory>
             </exclude>
         </whitelist>
     </filter>
