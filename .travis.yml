@@ -10,7 +10,7 @@ before_script:
   - phpenv config-rm xdebug.ini
   - composer update --prefer-dist
   # Reconfigure XDebug so PHPUnit can create code coverage report (note: Xdebug can't be removed again now without rm-ing php.ini)
-  - echo "extension = xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - echo "zend_extension = xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 script:
   - php ./vendor/phpunit/phpunit/phpunit --coverage-clover=build/logs/clover.xml
 after_script:
