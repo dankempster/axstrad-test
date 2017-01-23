@@ -6,7 +6,11 @@ php:
   - 7.0
   - 7.1
 before_script:
+  # Remove XDebug so composer runs faster
+  - phpenv config-rm xdebug.ini
   - composer update --prefer-dist
+  # Reconfigure XDebug so PHPUnit can create code coverage report (note: Xdebug can't be removed again now without rm-ing php.ini)
+  - echo "extension = xdebug.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 script:
   # - php ./vendor/phpunit/phpunit/phpunit
   - php ./vendor/phpunit/phpunit/phpunit --coverage-clover=build/logs/clover.xml
