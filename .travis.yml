@@ -10,11 +10,16 @@ env:
   - DEPS=stable
   - DEPS=dev
 
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
 # Set up the project for testing
 install:
   - if [[ $DEPS = 'lowest' ]]; then composer update -n --prefer-dist --prefer-lowest; fi
   - if [[ $DEPS = 'stable' ]]; then composer update -n --prefer-dist --prefer-stable; fi
-  - if [[ $DEPS = 'lowest' ]]; then composer update -n --prefer-dist; fi
+  - if [[ $DEPS = 'dev' ]]; then composer update -n --prefer-dist; fi
 
 # Run Tests
 script:
