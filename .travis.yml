@@ -5,10 +5,16 @@ php:
   - 5.6
   - 7.0
   - 7.1
+env:
+  - DEPS=lowest
+  - DEPS=stable
+  - DEPS=dev
 
 # Set up the project for testing
 install:
-  - composer update --prefer-dist
+  - if [[ $DEPS = 'lowest' ]]; then composer update -n --prefer-dist --prefer-lowest; fi
+  - if [[ $DEPS = 'stable' ]]; then composer update -n --prefer-dist --prefer-stable; fi
+  - if [[ $DEPS = 'lowest' ]]; then composer update -n --prefer-dist; fi
 
 # Run Tests
 script:
