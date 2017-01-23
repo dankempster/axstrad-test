@@ -3,7 +3,6 @@ php:
   - 5.4
   - 5.5
   - 5.6
-  - hhvm
 before_script:
   - composer update --prefer-dist
 script:
@@ -18,10 +17,6 @@ after_sucess:
 notifications:
   email:
     - dev@dankempster.co.uk
-matrix:
-  allow_failures:
-    - php: hhvm
-
 branches:
   only:
     - develop
